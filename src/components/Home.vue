@@ -6,6 +6,8 @@
     <router-link to="/clock">Time Tracking</router-link>
     |
     <router-link to="encounter_gen">Encounter Generator</router-link>
+    |
+    <router-link to="test">Test Page</router-link>
     <router-view></router-view>
   </div>
 </template>
