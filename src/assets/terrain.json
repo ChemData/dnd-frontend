@@ -1,0 +1,145 @@
+{
+    "marsh": {
+        "color": "#84ce94",
+        "name": "Marsh",
+        "textures": ["grass"],
+        "orienteering_dc": 20
+    },
+    "farmland": {
+        "color": "#a0d76b",
+        "name": "Farmland",
+        "textures": ["farm"],
+        "orienteering_dc": 10
+    },
+    "hilly_farmland": {
+        "color": "#a0d76b",
+        "name": "Terraced Farms",
+        "textures": ["farm", "hills"],
+        "orienteering_dc": 14
+    },
+    "grass": {
+        "color": "#abde52",
+        "name": "Grassland",
+        "textures": ["grass"],
+        "orienteering_dc": 13
+    },
+    "grass_hills": {
+        "color": "#abde52",
+        "name": "Grassy Hills",
+        "textures": ["grass", "hills"],
+        "orienteering_dc": 15
+    },
+    "grass_mountains": {
+        "color": "#abde52",
+        "name": "Grassy Mountains",
+        "textures": ["grass", "mountains"],
+        "orienteering_dc": 16
+    },
+    "forest": {
+        "color": "#39912d",
+        "name": "Forest",
+        "textures": ["trees"],
+        "orienteering_dc": 15
+    },
+    "forest_hills": {
+        "color": "#39912d",
+        "name": "Forested Hills",
+        "textures": ["trees", "hills"],
+        "orienteering_dc": 17
+    },
+    "forest_mountains": {
+        "color": "#39912d",
+        "name": "Forested Mountains",
+        "textures": ["trees", "mountains"],
+        "orienteering_dc": 19
+    },
+    "evergreen": {
+        "color": "#1b5e12",
+        "name": "Evergreen Forest",
+        "textures": ["trees"],
+        "orienteering_dc": 15
+    },
+    "evergreen_hills": {
+        "color": "#1b5e12",
+        "name": "Evergreen Hills",
+        "textures": ["trees", "hills"],
+        "orienteering_dc": 17
+    },
+    "evergreen_mountains": {
+        "color": "#1b5e12",
+        "name": "Evergreen Mountains",
+        "textures": ["trees", "mountains"],
+        "orienteering_dc": 19
+    },
+    "shrubs": {
+        "color": "#dadc80",
+        "name": "Shrubland",
+        "textures": ["grass"],
+        "orienteering_dc": 15
+    },
+    "shrubs_hills": {
+        "color": "#dadc80",
+        "name": "Hilly Shrubland",
+        "textures": ["grass", "hills"],
+        "orienteering_dc": 17
+    },
+    "shrubs_mountains": {
+        "color": "#dadc80",
+        "name": "Mountainous Shrubland",
+        "textures": ["grass", "mountains"],
+        "orienteering_dc": 19
+    },
+    "desert": {
+        "color": "#f8f085",
+        "name": "Desert",
+        "orienteering_dc": 14
+    },
+    "desert_hills": {
+        "color": "#f8f085",
+        "name": "Arid Hills",
+        "textures": ["hills"],
+        "orienteering_dc": 16
+    },
+    "desert_mountains": {
+        "color": "#f8f085",
+        "name": "Arid Mountains",
+        "textures": ["mountains"],
+        "orienteering_dc": 18
+    },
+    "mountains": {
+        "color": "#a86645",
+        "name": "Mountains",
+        "textures": ["mountains"],
+        "orienteering_dc": 18
+    },
+    "deep_ocean": {
+        "color": "#003366",
+        "name": "Deep Ocean",
+        "ocean": true,
+        "orienteering_dc": 15
+    },
+    "ocean": {
+        "color": "#6699cc",
+        "name": "Ocean",
+        "ocean": true,
+        "orienteering_dc": 13
+    },
+    "shallow_ocean": {
+        "color": "#8cb2d8",
+        "name": "Shallow Ocean",
+        "ocean": true,
+        "orienteering_dc": 11
+    },
+    "reef": {
+        "color": "#99ccff",
+        "textures": ["reef"],
+        "name": "Reef",
+        "ocean": true,
+        "orienteering_dc": 20
+    },
+    "empty": {
+        "color": "#ffffff",
+        "name": "Empty",
+        "orienteering_dc": 10
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "port_hephoris": {
+    "name": "Port Hephoris",
+    "link": "[[location:port_hephoris|Port Hephoris]]"
+  },
+  "metzuba": {
+  "name": "Metzuba",
+  "link": "[[location:metzuba|Metzuba]]"
+  },
+  "generic": {
+    "name": "Unspecified",
+    "link": "(Insert NPC location here with link)"
+  }
+}
