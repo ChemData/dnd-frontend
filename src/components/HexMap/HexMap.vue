@@ -1,10 +1,10 @@
 <script lang="ts">
 import {defineComponent, watch} from 'vue'
-import roadsData from '../assets/roads.json';
-import riversData from '../assets/rivers.json';
-import terrainData from '../assets/terrain.json';
-import settlementData from '../assets/settlements.json';
-import wildnessData from '../assets/wildness.json';
+import roadsData from '../../assets/roads.json';
+import riversData from '../../assets/rivers.json';
+import terrainData from '../../assets/terrain.json';
+import settlementData from '../../assets/settlements.json';
+import wildnessData from '../../assets/wildness.json';
 import {
   Hex,
   EmptyHexGrid,
@@ -12,14 +12,32 @@ import {
   axialRound,
   axialToNormal,
   NormalCoord
-} from "../dataStructures";
+} from "../../dataStructures";
 import MapLoader from './MapLoader.vue'
 import LocalMapLoader from './LocalMapLoader.vue'
 import MapDrawingSelection from "./MapDrawingSelection.vue";
 import ViewSelection from "./ViewSelection.vue";
-import { view } from '../store.ts';
+import { view } from '../../store.ts';
 
 let HEX_HEIGHT = 3 ** 0.5
+
+const POSITIONS = {
+  0: [0, 0],
+  1: [30, 0.6],
+  2: [90, 0.6],
+  3: [150, 0.6],
+  4: [210, 0.6],
+  5: [270, 0.6],
+  6: [330, 0.6],
+}
+
+function calcPositionInHex(positionNumber){
+  let vector = POSITIONS[positionNumber]
+  let x = Math.cos(vector[0]/180*Math.PI)*vector[1]*HEX_HEIGHT/2
+  let y = Math.sin(vector[0]/180*Math.PI)*vector[1]*HEX_HEIGHT/2
+  return [x, y]
+}
+
 
 
 export default defineComponent({
@@ -71,12 +89,7 @@ export default defineComponent({
     drawText(hex){
       if (hex.settlement != null) {
         if (this.view['show_settlement_names']) {
-              let x = 3/2 * hex.position.col * this.view['scale'] + this.view['offset_x']
-              let offset_down = (Boolean(hex.position.col % 2) == this.map.first_is_up)
-              let y = HEX_HEIGHT * this.view['scale'] * (hex.position.row + 0.5 * +offset_down) + this.view['offset_y']
-              this.ctx.font = `${Math.floor(0.3*this.view['scale'])}px Arial`;
-              this.ctx.fillStyle = 'black'
-              this.ctx.fillText(hex.settlement.name, x-this.view['scale']*0.5, y-this.view['scale']*0.3*HEX_HEIGHT)
+          this.writeText(hex, 2, hex.settlement.name, 0.3)
           }
       }
     },
@@ -125,8 +138,12 @@ export default defineComponent({
       //Add terrain textures
       if (this.view['show_terrain']) {
           if ('textures' in this.terrain_info[hex.terrain]){
-            for (let texture_name of this.terrain_info[hex.terrain]['textures'])
-              this.ctx.drawImage(this.terrain_texture_images[texture_name], x - this.view['scale'] * 0.5, y - this.view['scale'] * 0.5, this.view['scale'], this.view['scale'])
+            let textures = this.terrain_info[hex.terrain]['textures']
+            for (let c=0; c<2; c++){
+              let position = [4, 6][c]
+              let texture = this.terrain_texture_images[textures[c%textures.length]]
+              this.drawSVG(hex, position, texture, 0.7)
+            }
           }
       }
       // Add coordinates
@@ -139,7 +156,7 @@ export default defineComponent({
       //Add settlement symbols
       if (hex.settlement != null) {
           if (this.view['show_settlements']) {
-              this.ctx.drawImage(this.settlement_info[hex.settlement.type]['icon'], x - this.view['scale'] * 0.4, y - this.view['scale'] * 0.4, this.view['scale']*0.8, this.view['scale']*0.8)
+              this.drawSVG(hex, 0, this.settlement_info[hex.settlement.type]['icon'], 0.8)
           }
       }
     },
@@ -351,6 +368,47 @@ export default defineComponent({
     standardPosition(pt: Point): Point {
         return {'x': (pt.x - this.view.offset_x) / this.view.scale, 'y': (pt.y - this.view.offset_y) / this.view.scale}
     },
+    hexCenter(hex: Hex){
+      let x = 3/2 * hex.position.col * this.view['scale'] + this.view['offset_x']
+      let offset_down = (Boolean(hex.position.col % 2) == this.map.first_is_up)
+      let y = HEX_HEIGHT * (hex.position.row + 0.5 * +offset_down) * this.view['scale'] + this.view['offset_y']
+      return [x, y]
+    },
+    drawSVG(hex: Hex, position, image, size){
+      let hexCenter = this.hexCenter(hex)
+      let x = hexCenter[0]
+      let y = hexCenter[1]
+
+      let hexCoord = calcPositionInHex(position)
+      x += hexCoord[0] * this.view['scale']
+      y += hexCoord[1] * this.view['scale']
+
+      x -= 0.5 * size * this.view['scale']
+      y -= 0.5 * size * this.view['scale']
+
+      this.ctx.drawImage(image, x, y, size*this.view['scale'], size*this.view['scale'])
+    },
+    writeText(hex: Hex, position, text, size){
+      let hexCenter = this.hexCenter(hex)
+      let x = hexCenter[0]
+      let y = hexCenter[1]
+
+      let hexCoord = calcPositionInHex(position)
+      x += hexCoord[0] * this.view['scale']
+      y += hexCoord[1] * this.view['scale']
+
+
+      this.ctx.font = `${Math.floor(size*this.view['scale'])}px Arial`;
+      this.ctx.fillStyle = 'black'
+      const textSize = this.ctx.measureText(text)
+      let width = textSize.width
+      let height = textSize.actualBoundingBoxAscent + textSize.actualBoundingBoxDescent
+
+      x -= width * 0.5
+      y -= height * 0.5
+
+      this.ctx.fillText(text, x, y)
+    }
   },
   mounted() {
     this.canvas = <HTMLCanvasElement>document.getElementById('hexcanvas')

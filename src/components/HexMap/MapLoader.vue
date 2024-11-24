@@ -1,7 +1,7 @@
 <script>
 import {defineComponent} from 'vue'
 import axios from 'axios'
-import {EmptyHexGrid} from '../dataStructures'
+import {EmptyHexGrid} from '../../dataStructures'
 
 let API_URL = import.meta.env.VITE_API_URL;
 
@@ -12,39 +12,57 @@ export default defineComponent({
   emits: ['mapChange'],
   data() {
     return{
+      map_list: [],
       selected_map_name: '',
       showModal: false,
       height: 10,
       width: 10
     }},
+  mounted() {
+    this.loadMapNames()
+  },
   methods: {
-    async localSaveMap(){
+    async loadMapNames(){
+      try {
+        let response = await axios.get(`${API_URL}/saved_map_names`)
+        this.map_list = response.data
+      } catch (error) {
+        console.error('Error loading map names:', error)
+      }
+    },
+    async saveMap(){
       let save_name = prompt('Save name: ')
-      if (!save_name || (save_name === '')) {
+      if (!save_name || (save_name === '')){
         return
       }
-      const blob = new Blob([JSON.stringify(this.map)], {type: 'text/plain'})
-      let link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = save_name + '.map';
-      link.click();
-
+      let payload = {'save_name': save_name, 'map_data': this.map}
+      try {
+        await axios.post(`${API_URL}/save_map`, payload)
+      } catch (error) {
+        console.error('Error saving map:', error)
+      }
+      await this.loadMapNames()
     },
 
-    async localLoadMap(event) {
-      const file = event.target.files[0];
-      if (!file) return;
-
+    async loadMap() {
       try {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          const content = e.target.result;
-          this.$emit('mapChange', JSON.parse(content))
-        };
-        reader.readAsText(file);
+        let response = await axios.get(`${API_URL}/load_map/${this.selected_map_name}`)
+        this.$emit('mapChange', response.data)
       } catch (error) {
-        console.error('Error loading map:', error);
+        console.error('Error loading map:', error)
       }
+    },
+
+    async localLoadMap() {
+      let x = 10;
+    },
+    async deleteMap() {
+      try {
+        await axios.post(`${API_URL}/delete_save`, {to_delete: this.selected_map_name})
+      } catch (error) {
+        console.error('Error deleting map:', error)
+      }
+      await this.loadMapNames()
     },
     newMap() {
       this.showModal = false
@@ -66,21 +84,41 @@ export default defineComponent({
     <button
       type="button"
       class="button is-small"
-      @click="localSaveMap"
+      @click="saveMap"
     >
       Save
     </button>
-    <label class="file-input-label">
-      <input
-        type="file"
-        accept=".map"
-        style="display: none;"
-        @change="localLoadMap"
+    <button
+      type="button"
+      class="button is-small"
+      @click="loadMap"
+    >
+      Load
+    </button>
+    <button
+      type="button"
+      class="button is-small"
+      @click="deleteMap"
+    >
+      Delete
+    </button>
+    <select
+      v-model="selected_map_name"
+      class="select is-small"
+    >
+      <option
+        disabled
+        value=""
       >
-      <span class="button is-small">
-        Load Map
-      </span>
-    </label>
+        Select a Map
+      </option>
+      <option
+        v-for="map_name in map_list"
+        :value="map_name"
+      >
+        {{ map_name }}
+      </option>
+    </select>
   </div>
   <div
     v-if="showModal"

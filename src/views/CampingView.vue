@@ -103,7 +103,7 @@
 
 import PersonalCampingEvents from "@/components/PersonalCampingEvents.vue";
 export default {
-  name: "Camping",
+  name: "CampingView",
   components: {
     PersonalCampingEvents
   },

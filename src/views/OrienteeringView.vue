@@ -3,7 +3,7 @@ import {defineComponent} from 'vue'
 import terrainData from '../assets/terrain.json';
 
 export default defineComponent({
-  name: "OrienteeringPage",
+  name: "OrienteeringView",
   data() {
     return {
       terrain_options: '',

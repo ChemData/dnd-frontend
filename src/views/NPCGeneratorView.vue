@@ -1,4 +1,5 @@
 <script>
+import { WikiRpcClient, WikiService, DokuwikiService } from "@glen/wiki-rpc-client";
 import {defineComponent} from 'vue'
 import names from '../assets/names.json';
 import traits from '../assets/traits.json';
@@ -7,7 +8,7 @@ import roles from '../assets/roles.json';
 import locations from '../assets/locations.json';
 
 export default defineComponent({
-  name: "NPCGenerator",
+  name: "NPCGeneratorView",
   data() {
     return {
       first_name: 'Bill',
@@ -25,7 +26,12 @@ export default defineComponent({
       notable_feature: 'blind',
       features: traits,
       miscs: ["hates elves", "hates halflings"],
-      misc_traits: misc_traits
+      misc_traits: misc_traits,
+      session_number: 15,
+      voiced_by: 'Unspecified',
+      voice_options: ['Unspecified', 'Daniel', 'Jessie'],
+      voice_description: "",
+      text_for_wiki: ""
     }
   },
   methods: {
@@ -90,12 +96,28 @@ export default defineComponent({
       this.miscs.push('')
       this.randomMisc(this.miscs.length-1)
     },
-    copyForWiki(){
-      let output = `===== ${this.first_name} ${this.last_name} =====\n\n`
+    async copyForWiki(){
+      navigator.clipboard.writeText(this.text_for_wiki)
+      window.open(`${import.meta.env.VITE_WIKI_API}?id=npc:${this.first_name}_${this.last_name}`, '_blank')
+    },
+  },
+  created(){
+    this.fullRandomize()
+    this.text_for_wiki = this.wikiOutput
+  },
+  watch: {
+    wikiOutput(newVal){
+      this.text_for_wiki = newVal
+    }
+  },
+  computed: {
+    wikiOutput(){
+            let output = `===== ${this.first_name} ${this.last_name} =====\n\n`
       output += `${this.short_name} is a ${this.social_role} in ${this.locations[this.location]["link"]}. \n`
       output += "==== Summary ====\n"
       output += `  * **Description:** ${this.capitalize(this.gender)} ${this.capitalize(this.race)}, ${this.age}. ${this.capitalize(this.notable_feature)}.\n`
       output += `  * **Role:** ${this.capitalize(this.social_role)}. \n`
+      output += `  * **Voiced By:** ${this.voiced_by} (${this.voice_description}). \n`
       output += `  * **Miscellaneous:** \n`
       for (let misc_fact of this.miscs){
         if (misc_fact !== ''){
@@ -106,13 +128,10 @@ export default defineComponent({
       output += "==== Topics ====\n\n"
       output += "  * **Topic #1:** Topic of interest. \n  * **Topic #2:** Topic of interest. \n\n"
       output += "==== Party Interactions ====\n\n"
-      output += "The party met (Insert NPC name here) on (Insert session number here). Describe further interactions in an unordered chronological list."
-      console.log(output)
-      navigator.clipboard.writeText(output)
+      let session_string = '0'.repeat(Math.max(3-this.session_number.toString().length, 0)) + this.session_number
+      output += `The party met ${this.short_name} on [[session:session_${session_string}|Session ${this.session_number}]]. Describe further interactions in an unordered chronological list.`
+      return output
     }
-  },
-  created(){
-    this.fullRandomize()
   }
 })
 </script>
@@ -188,12 +207,35 @@ export default defineComponent({
         <button class="button is-small is-light is-primary remove-button" @click="addMisc">+</button>
       </div>
     </div>
+    <div class="container horizontal-container">
+      <label style="margin-right: 10px;">Session: </label>
+      <input type="number" class="input" v-model="session_number">
+    </div>
+    <div class="container horizontal-container">
+      <div>
+        <label class="label">Voiced by: </label>
+        <select v-model="voiced_by" class="select">
+          <option v-for="voice in voice_options" :key="voice" :value="voice">
+            {{ voice }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label class="label">Voice Description</label>
+        <input type="text" class="input" v-model="voice_description">
+      </div>
+    </div>
     <div>
       <button class="button" @click="fullRandomize">
         <img :src="'./assets/die.svg'"  class="die-icon"/>
       </button>
-      <button class="button" @click="copyForWiki">Dump for Wiki</button>
     </div>
+    <div>
+      <textarea class="textarea output-box" v-model="text_for_wiki"></textarea>
+    </div>
+  </div>
+  <div>
+    <button class="button" @click="copyForWiki">Dump to Wiki</button>
   </div>
 </template>
 
@@ -235,6 +277,11 @@ export default defineComponent({
 .right-justified-div {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.output-box {
+  margin-top: 10px;
+  height: auto;
 }
 
 </style>

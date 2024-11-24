@@ -1,6 +1,6 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
-import { view } from '../store.ts';
+import { view } from '../../store.ts';
 
 export default defineComponent({
   name: "ViewSelection",

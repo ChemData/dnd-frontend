@@ -11,7 +11,7 @@ import {defineComponent} from 'vue';
 import axios from 'axios';
 
 export default defineComponent({
-  name: "SetMaker",
+  name: "TestView",
   data() {
     return {
       creature_list: ["wolf", "bear", "moose"],
