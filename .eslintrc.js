@@ -10,5 +10,6 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 0
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
-  }
+  },
+  "parser": "@typescript-eslint/parser"
 }

@@ -5,10 +5,13 @@ import App from './views/HomeView.vue'
 import '../assets/main.scss';
 import {createPinia} from "pinia";
 import {router} from "@/router/router";
+import ToastPlugin from "vue-toast-notification";
+import 'vue-toast-notification/dist/theme-bootstrap.css';
 
 
 const app = createApp(App)
 const pinia = createPinia()
 app.use(pinia)
 app.use(router)
+app.use(ToastPlugin)
 app.mount("#app")

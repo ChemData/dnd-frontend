@@ -30,6 +30,7 @@ export default defineComponent({
   created(){
     this.mobDataStore = mobDataStore()
     this.loadSet()
+    console.log(this.mobDataStore.statBlocks)
   },
   methods: {
     capitalize,

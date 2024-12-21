@@ -1,0 +1,46 @@
+{
+    "southern_forest": {
+        "name": "southern forest",
+        "sets": {
+          "wolves": 1,
+          "bears": 1,
+          "millipedes": 1,
+          "bandits": 1,
+          "forest_creatures": 1,
+          "boars": 1,
+          "ogres": 1,
+          "harpies": 1,
+          "spiders": 1,
+          "satyrs": 1,
+          "plants": 1,
+          "hippos": 1
+        }
+    },
+    "southern_shore": {
+        "name": "southern shore",
+        "sets": {
+          "kuo-toas": 1,
+          "coastal_elementals": 1,
+          "sahuagin": 1,
+          "bandits": 1,
+          "ogres": 1,
+          "plants": 1,
+          "hippos": 1
+        }
+    },
+    "southern_plains": {
+        "name": "southern plains",
+        "sets": {
+          "wolves": 1,
+          "bandits": 1,
+          "rhinos": 1,
+          "boars": 1,
+          "millipedes": 1,
+          "land_elementals": 1,
+          "reptiles": 1,
+          "ankhegs": 1,
+          "hyenas": 1,
+          "hippos": 1
+        }
+    }
+}
