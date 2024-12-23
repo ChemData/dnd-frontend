@@ -1,0 +1,12 @@
+{
+  "river": {
+    "color": "#0b5bdb",
+    "width": 0.1,
+    "display": "River"
+  },
+  "stream": {
+    "color": "#7ea3de",
+    "width": 0.05,
+    "display": "Stream"
+  }
+}

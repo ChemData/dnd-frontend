@@ -1,0 +1,20 @@
+{
+  "peaceful": {
+    "name": "Peaceful"
+  },
+  "tamed": {
+    "name": "Tamed Wilderness"
+  },
+  "untamed": {
+    "name": "Untamed Wilderness"
+  },
+  "dangerous": {
+    "name": "Dangerous Wilderness"
+  },
+  "inhospitiable": {
+    "name": "Inhospitable Wilderness"
+  },
+  "alien": {
+    "name": "Alien Plains of Horror"
+  }
+}

@@ -1,22 +1,17 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import Camping from './components/Camping.vue'
-import Clock from './components/Clock.vue'
-import EncounterGenerator from "./components/EncounterGenerator.vue";
-import Test from "./components/Test.vue"
-import App from './components/Home.vue'
-import {createWebHashHistory, createRouter} from "vue-router";
+import App from './views/HomeView.vue'
+import '../assets/main.scss';
+import {createPinia} from "pinia";
+import {router} from "@/router/router";
+import ToastPlugin from "vue-toast-notification";
+import 'vue-toast-notification/dist/theme-bootstrap.css';
 
-const routes = [
-    {path: "/camping", component:Camping},
-    {path: "/clock", component:Clock},
-    {path: "/encounter_gen", component: EncounterGenerator},
-    {path: "/test", component: Test}
-]
-
-const router = createRouter({history: createWebHashHistory(), routes})
 
 const app = createApp(App)
+const pinia = createPinia()
+app.use(pinia)
 app.use(router)
+app.use(ToastPlugin)
 app.mount("#app")

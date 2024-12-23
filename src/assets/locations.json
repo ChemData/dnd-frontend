@@ -1,0 +1,18 @@
+{
+  "port_hephoris": {
+    "name": "Port Hephoris",
+    "link": "[[location:port_hephoris|Port Hephoris]]"
+  },
+  "metzuba": {
+  "name": "Metzuba",
+  "link": "[[location:metzuba|Metzuba]]"
+  },
+  "fools_paradise": {
+    "name": "Fool's Paradise",
+    "link": "[[location:fools_paradise|Fool's Paradise]]"
+  },
+  "generic": {
+    "name": "Unspecified",
+    "link": "(Insert NPC location here with link)"
+  }
+}
