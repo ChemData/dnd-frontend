@@ -87,7 +87,7 @@ const StatBlockSchema = z.object({
     xp: z.number()
 })
 
-type StatBlock = z.infer<typeof StatBlockSchema>;
+export type StatBlock = z.infer<typeof StatBlockSchema>;
 
 const MobSchema = z.object({
     reskin: z.string().optional(),
@@ -103,6 +103,7 @@ export type StatBlocks = z.infer<typeof StatBlocksSchema>;
 const MobSetSchema = z.object({
     name: z.string(),
     mobs: z.array(MobSchema),
+    source: z.string()
 });
 
 export type MobSet = z.infer<typeof MobSetSchema>

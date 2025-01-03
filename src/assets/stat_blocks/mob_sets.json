@@ -11,7 +11,8 @@
             {
                 "statBlockId": "mastiff", "reskin": "young wolf"
             }
-        ]
+        ],
+      "source": "default"
     },
     "bears": {
         "name": "bears",
@@ -25,7 +26,8 @@
             {
                 "statBlockId": "cave bear"
             }
-        ]
+        ],
+      "source": "default"
     },
     "millipedes": {
         "name": "millipedes",
@@ -42,7 +44,8 @@
             {
                 "statBlockId": "swarm of centipedes", "reskin": "swarm of small millipedes"
             }
-        ]
+        ],
+      "source": "default"
     },
     "bandits": {
         "name": "bandits",
@@ -71,7 +74,8 @@
             {
                 "statBlockId": "spy", "reskin": "sneaky bandit"
             }
-        ]
+        ],
+      "source": "default"
     },
     "dwarves": {
         "name": "dwarves",
@@ -103,7 +107,8 @@
             {
                 "statBlockId": "scout"
             }
-        ]
+        ],
+      "source": "default"
     },
     "thri-kreen": {
         "name": "thri-kreen",
@@ -111,7 +116,8 @@
             {
                 "statBlockId": "thri-kreen"
             }
-        ]
+        ],
+      "source": "default"
     },
     "sahuagin": {
         "name": "sahuagin",
@@ -131,7 +137,8 @@
             {
                 "statBlockId": "reef shark"
             }
-        ]
+        ],
+      "source": "default"
     },
     "coastal_elementals": {
         "name": "coastal elementals",
@@ -154,7 +161,8 @@
             {
                 "statBlockId": "mud mephit"
             }
-        ]
+        ],
+      "source": "default"
     },
     "land_elementals": {
         "name": "land elementals",
@@ -180,7 +188,8 @@
             {
                 "statBlockId": "earth elemental"
             }
-        ]
+        ],
+      "source": "default"
     },
     "mountain_elementals": {
         "name": "mountain elementals",
@@ -200,7 +209,8 @@
             {
                 "statBlockId": "earth elemental"
             }
-        ]
+        ],
+      "source": "default"
     },
     "fire_elementals": {
         "name": "fire elementals",
@@ -223,7 +233,8 @@
             {
                 "statBlockId": "fire snake"
             }
-        ]
+        ],
+      "source": "default"
     },
     "forest_creatures": {
         "name": "forest creatures",
@@ -246,7 +257,8 @@
             {
                 "statBlockId": "giant elk"
             }
-        ]
+        ],
+      "source": "default"
     },
     "reptiles": {
         "name": "reptiles",
@@ -281,7 +293,8 @@
             {
                 "statBlockId": "giant crocodile"
             }
-        ]
+        ],
+      "source": "default"
     },
     "rhinos": {
         "name": "rhinos",
@@ -295,7 +308,8 @@
             {
                 "statBlockId": "triceratops", "reskin": "giant rhino"
             }
-        ]
+        ],
+      "source": "default"
     },
     "ankhegs": {
         "name": "ankhegs",
@@ -312,7 +326,8 @@
             {
                 "statBlockId": "ankheg queen"
             }
-        ]
+        ],
+      "source": "default"
     },
     "boars": {
         "name": "boars",
@@ -326,7 +341,8 @@
             {
                 "statBlockId": "badger", "reskin": "piglet"
             }
-        ]
+        ],
+      "source": "default"
     },
     "ogres": {
         "name": "ogres",
@@ -349,7 +365,8 @@
             {
                 "statBlockId": "cyclops"
             }
-        ]
+        ],
+      "source": "default"
     },
     "harpies": {
         "name": "harpies",
@@ -375,7 +392,8 @@
             {
                 "statBlockId": "wingmistress"
             }
-        ]
+        ],
+      "source": "default"
     },
     "spiders": {
         "name": "spiders",
@@ -395,7 +413,8 @@
             {
                 "statBlockId": "phase spider"
             }
-        ]
+        ],
+      "source": "default"
     },
     "vampires": {
         "name": "vampires",
@@ -412,7 +431,8 @@
             {
                 "statBlockId": "vampire warrior"
             }
-        ]
+        ],
+      "source": "default"
     },
     "cultists": {
         "name": "cultists",
@@ -438,7 +458,8 @@
             {
                 "statBlockId": "guard"
             }
-        ]
+        ],
+      "source": "default"
     },
     "satyrs": {
         "name": "satyrs",
@@ -461,7 +482,8 @@
             {
                 "statBlockId": "satyr charger"
             }
-        ]
+        ],
+      "source": "default"
     },
     "kuo-toas": {
         "name": "kuo-toas",
@@ -484,7 +506,8 @@
             {
                 "statBlockId": "crocodile"
             }
-        ]
+        ],
+      "source": "default"
     },
     "centaurs": {
         "name": "centaurs",
@@ -492,7 +515,8 @@
             {
                 "statBlockId": "centaur"
             }
-        ]
+        ],
+      "source": "default"
     },
     "hyenas": {
         "name": "hyenas",
@@ -506,7 +530,8 @@
             {
                 "statBlockId": "giant hyena"
             }
-        ]
+        ],
+      "source": "default"
     },
     "plants": {
         "name": "plants",
@@ -529,7 +554,8 @@
             {
                 "statBlockId": "vine blight"
             }
-        ]
+        ],
+      "source": "default"
     },
     "fungi": {
         "name": "fungi",
@@ -549,7 +575,8 @@
             {
                 "statBlockId": "shrieker"
             }
-        ]
+        ],
+      "source": "default"
     },
     "hippos": {
         "name": "hippos",
@@ -563,7 +590,8 @@
             {
                 "statBlockId": "alpha hippo"
             }
-        ]
+        ],
+      "source": "default"
     },
     "undead": {
         "name": "undead",
@@ -625,7 +653,8 @@
             {
                 "statBlockId": "lich"
             }
-        ]
+        ],
+      "source": "default"
     },
     "corporeal-undead": {
         "name": "undead, corporeal",
@@ -669,6 +698,7 @@
             {
                 "statBlockId": "lich"
             }
-        ]
+        ],
+      "source": "default"
     }
 }

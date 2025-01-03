@@ -60,7 +60,7 @@ class Group{
         this.xpTotal = 0
         this.addMob([])
     }
-    addMob(newMobs?: MobType[]){
+    addMob(newMobs?: MobType| MobType[]){
         if (!Array.isArray(newMobs)){
             newMobs = [newMobs]
         }
@@ -86,12 +86,12 @@ class UniqueGroups {
     constructor(groups: Group[]) {
         this.groups = []
         this.groupIds = []
-        for (let group in groups){
+        for (let group of groups){
             this.addGroup(group)
         }
     }
     addGroup(newGroup: Group){
-        let newId = group.newId()
+        let newId = newGroup.groupId()
         if (!this.groupIds.includes(newId)){
             this.groups.push(newGroup)
             this.groupIds.push(newId)
@@ -105,7 +105,7 @@ class UniqueGroups {
 
 function fillGroup(group: Group, possibleMobs: MobType[], minXpVal: number, maxXpVal: number, maxSize: number | null){
     if (maxSize && group.mobs.length > maxSize){
-        throw new NoLegalGroups()
+        throw new NoLegalGroups('Could not find a set that works.')
     }
     possibleMobs = [...possibleMobs]
     if (group.xpTotal > minXpVal){
@@ -123,7 +123,7 @@ function fillGroup(group: Group, possibleMobs: MobType[], minXpVal: number, maxX
             return fillGroup(newGroup, possibleMobs, minXpVal, maxXpVal, maxSize)
         }
     }
-    throw new NoLegalGroups()
+    throw new NoLegalGroups('Could not find a set that works.')
 }
 
 function uniqueGroup(
@@ -161,7 +161,7 @@ function uniqueGroup(
         }
         redundantGenerations += 1
     }
-    throw new NoUniqueGroup()
+    throw new NoUniqueGroup('No acceptable groups were found.')
 }
 
 
@@ -187,6 +187,7 @@ export function singleEncounter(
     minCr?: number
 ): CombatEncounter{
     let mobSet = choice(mobSets)
+    console.log(mobSet)
     let group = uniqueGroup(mobSet.mobs, party, difficulty, maxMobs, minCr)
     return new CombatEncounter(group, mobSet.name, difficulty)
 }

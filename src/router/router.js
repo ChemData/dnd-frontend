@@ -6,9 +6,9 @@ import EncounterGenerator from "@/views/EncounterGeneratorView.vue";
 import NPCGenerator from "@/views/NPCGeneratorView.vue";
 import HexMap from "@/components/HexMap/HexMap.vue";
 import MapView from "@/views/MapView.vue";
-import MobSetView from "@/views/MobSetView.vue";
 import MobMetaSetView from "@/views/MobMetaSetView.vue";
 import DungeonView from "@/views/DungeonView.vue";
+import MobSetManagementView from "@/views/MobSetManagementView.vue";
 
 const routes = [
     {path: "/camping", component: Camping},
@@ -17,8 +17,8 @@ const routes = [
     {path: "/encounter-gen", component: EncounterGenerator},
     {path: "/npc-gen", component: NPCGenerator},
     {path: "/hexmap", component: HexMap},
-    {path: "/test", component: MapView},
-    {path: "/mob-set-designer", component: MobSetView},
+    {path: "/test", component: MobSetManagementView},
+    {path: "/mob-set-designer", component: MobSetManagementView},
     {path: "/mob-meta-set-designer", component: MobMetaSetView},
     {path: "/dungeon-maker", component: DungeonView}
 ]

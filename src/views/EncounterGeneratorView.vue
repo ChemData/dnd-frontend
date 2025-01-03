@@ -1,5 +1,6 @@
 <script>
 import {capitalize, defineComponent} from 'vue';
+import vSelect from "vue-select";
 import axios from 'axios';
 import { mobDataStore } from "@/stores/mobDataStore";
 import {singleEncounter} from "@/generation";
@@ -12,7 +13,7 @@ console.log(API_URL)
 
 export default defineComponent({
   name: "EncounterGeneratorView",
-  components: {Mob: Mob},
+  components: {Mob: Mob, vSelect},
   data() {
     return{
       party_size: 4,
@@ -28,7 +29,7 @@ export default defineComponent({
           {'name': "Inhospitable Wilderness", 'value': 'inhospitable'},
           {'name': "Alien Plains of Horror", 'value': 'alien'}
           ],
-      primary_enemy: "",
+      primaryEnemy: "",
       max_enemies: 6,
       minimum_cr: '0',
       cr_options: ['0', '1/8', '1/4', '1/2', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
@@ -44,8 +45,8 @@ export default defineComponent({
       ],
       currentEncounter: null,
       combatEncounter: null,
-      enemy_options: mobDataStore().mobSets,
-      mobKeyOffset: 0
+      mobKeyOffset: 0,
+      mobDataStore: mobDataStore()
     }
   },
   mounted() {
@@ -74,9 +75,10 @@ export default defineComponent({
       if (this.difficulty === 'wildness') {
         wildness_val = this.wildness
       }
-      let mobSets = mobDataStore().metaMobSets[this.terrain]["sets"]
-      let setWeights = Object.values(mobSets)
-      mobSets = Object.keys(mobSets).map(mobSet => mobDataStore().mobSets[mobSet])
+      //let mobSets = mobDataStore().metaMobSets[this.terrain]["sets"]
+      //let setWeights = Object.values(mobSets)
+      //mobSets = Object.keys(mobSets).map(mobSet => mobDataStore().mobSets[mobSet])
+      let mobSets = [mobDataStore().mobSets[this.primaryEnemy]]
       try{
         this.combatEncounter = singleEncounter(this.difficulty, Array(this.party_size).fill(this.party_level), mobSets, this.max_enemies, this.minimum_cr)
         this.currentEncounter = 'combat'
@@ -111,6 +113,11 @@ export default defineComponent({
       } catch (error) {
         console.error(error.data);
       }
+    }
+  },
+  computed: {
+    mobSetOptions(){
+      return Object.keys(this.mobDataStore.mobSets).map(key => ({id: key, name: this.mobDataStore.mobSets[key].name}))
     }
   }
 })
@@ -160,14 +167,6 @@ export default defineComponent({
       </div>
       <div>
         <label>Primary Enemy</label>
-        <select id="primary_enemy_select" v-model="primary_enemy">
-          <option value="">
-            None
-          </option>
-          <option v-for="enemy in enemy_options" :key="enemy.value" :value="enemy.value">
-            {{ enemy.name }}
-          </option>
-        </select>
       </div>
       <div>
         <label for="roll_hp_checkbox">Roll HP?</label>

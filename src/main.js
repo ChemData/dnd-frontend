@@ -1,8 +1,8 @@
+import 'vue-select/dist/vue-select.css'
 import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './views/HomeView.vue'
-import '../assets/main.scss';
 import {createPinia} from "pinia";
 import {router} from "@/router/router";
 import ToastPlugin from "vue-toast-notification";

@@ -112,3 +112,17 @@ export function roll(diceString: string): number {
     // Add the modifier (if any)
     return sum + modifier;
 }
+
+export function parseCR(cr: string): number {
+  const crMap: { [key: string]: number } = {
+    '1/8': 0.125,
+    '1/4': 0.25,
+    '1/2': 0.5
+  };
+
+  if (crMap[cr]) {
+    return crMap[cr];
+  }
+
+  return parseFloat(cr);
+}
