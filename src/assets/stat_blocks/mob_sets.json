@@ -1,704 +1,716 @@
 {
-    "wolves": {
-        "name": "wolves",
-        "mobs": [
-            {
-                "statBlockId": "wolf"
-            },
-            {
-                "statBlockId": "dire wolf"
-            },
-            {
-                "statBlockId": "mastiff", "reskin": "young wolf"
-            }
-        ],
-      "source": "default"
-    },
-    "bears": {
-        "name": "bears",
-        "mobs": [
-            {
-                "statBlockId": "black bear"
-            },
-            {
-                "statBlockId": "brown bear"
-            },
-            {
-                "statBlockId": "cave bear"
-            }
-        ],
-      "source": "default"
-    },
-    "millipedes": {
-        "name": "millipedes",
-        "mobs": [
-            {
-                "statBlockId": "giant millipede"
-            },
-            {
-                "statBlockId": "adult giant millipede"
-            },
-            {
-                "statBlockId": "giant centipede"
-            },
-            {
-                "statBlockId": "swarm of centipedes", "reskin": "swarm of small millipedes"
-            }
-        ],
-      "source": "default"
-    },
-    "bandits": {
-        "name": "bandits",
-        "mobs": [
-            {
-                "statBlockId": "bandit"
-            },
-            {
-                "statBlockId": "bandit captain"
-            },
-            {
-                "statBlockId": "veteran"
-            },
-            {
-                "statBlockId": "knight", "reskin": "armored bandit"
-            },
-            {
-                "statBlockId": "scout"
-            },
-            {
-                "statBlockId": "gladiator", "reskin": "muscly bandit"
-            },
-            {
-                "statBlockId": "druid", "reskin": "caster bandit"
-            },
-            {
-                "statBlockId": "spy", "reskin": "sneaky bandit"
-            }
-        ],
-      "source": "default"
-    },
-    "dwarves": {
-        "name": "dwarves",
-        "mobs": [
-            {
-                "statBlockId": "orc war chief", "reskin": "war chief"
-            },
-            {
-                "statBlockId": "hobgoblin captain", "reskin": "captain"
-            },
-            {
-                "statBlockId": "hobgoblin warlord", "reskin": "warlord"
-            },
-            {
-                "statBlockId": "mage"
-            },
-            {
-                "statBlockId": "veteran"
-            },
-            {
-                "statBlockId": "priest"
-            },
-            {
-                "statBlockId": "berserker"
-            },
-            {
-                "statBlockId": "duergar"
-            },
-            {
-                "statBlockId": "scout"
-            }
-        ],
-      "source": "default"
-    },
-    "thri-kreen": {
-        "name": "thri-kreen",
-        "mobs": [
-            {
-                "statBlockId": "thri-kreen"
-            }
-        ],
-      "source": "default"
-    },
-    "sahuagin": {
-        "name": "sahuagin",
-        "mobs": [
-            {
-                "statBlockId": "sahuagin"
-            },
-            {
-                "statBlockId": "sahuagin baron"
-            },
-            {
-                "statBlockId": "sahuagin priestess"
-            },
-            {
-                "statBlockId": "giant sea horse"
-            },
-            {
-                "statBlockId": "reef shark"
-            }
-        ],
-      "source": "default"
-    },
-    "coastal_elementals": {
-        "name": "coastal elementals",
-        "mobs": [
-            {
-                "statBlockId": "air elemental"
-            },
-            {
-                "statBlockId": "ice mephit"
-            },
-            {
-                "statBlockId": "water elemental"
-            },
-            {
-                "statBlockId": "water weird"
-            },
-            {
-                "statBlockId": "marid"
-            },
-            {
-                "statBlockId": "mud mephit"
-            }
-        ],
-      "source": "default"
-    },
-    "land_elementals": {
-        "name": "land elementals",
-        "mobs": [
-            {
-                "statBlockId": "dao"
-            },
-            {
-                "statBlockId": "dust mephit"
-            },
-            {
-                "statBlockId": "galeb duhr"
-            },
-            {
-                "statBlockId": "gargoyle"
-            },
-            {
-                "statBlockId": "mud mephit"
-            },
-            {
-                "statBlockId": "xorn"
-            },
-            {
-                "statBlockId": "earth elemental"
-            }
-        ],
-      "source": "default"
-    },
-    "mountain_elementals": {
-        "name": "mountain elementals",
-        "mobs": [
-            {
-                "statBlockId": "galeb duhr"
-            },
-            {
-                "statBlockId": "gargoyle"
-            },
-            {
-                "statBlockId": "dust mephit"
-            },
-            {
-                "statBlockId": "air elemental"
-            },
-            {
-                "statBlockId": "earth elemental"
-            }
-        ],
-      "source": "default"
-    },
-    "fire_elementals": {
-        "name": "fire elementals",
-        "mobs": [
-            {
-                "statBlockId": "smoke mephit"
-            },
-            {
-                "statBlockId": "steam mephit"
-            },
-            {
-                "statBlockId": "magma mephit"
-            },
-            {
-                "statBlockId": "magmin"
-            },
-            {
-                "statBlockId": "fire elemental"
-            },
-            {
-                "statBlockId": "fire snake"
-            }
-        ],
-      "source": "default"
-    },
-    "forest_creatures": {
-        "name": "forest creatures",
-        "mobs": [
-            {
-                "statBlockId": "giant weasel"
-            },
-            {
-                "statBlockId": "boar"
-            },
-            {
-                "statBlockId": "elk"
-            },
-            {
-                "statBlockId": "giant badger"
-            },
-            {
-                "statBlockId": "giant goat"
-            },
-            {
-                "statBlockId": "giant elk"
-            }
-        ],
-      "source": "default"
-    },
-    "reptiles": {
-        "name": "reptiles",
-        "mobs": [
-            {
-                "statBlockId": "lizard"
-            },
-            {
-                "statBlockId": "flying snake"
-            },
-            {
-                "statBlockId": "poisonous snake"
-            },
-            {
-                "statBlockId": "constrictor snake"
-            },
-            {
-                "statBlockId": "giant lizard"
-            },
-            {
-                "statBlockId": "giant poisonous snake"
-            },
-            {
-                "statBlockId": "crocodile"
-            },
-            {
-                "statBlockId": "giant constrictor snake"
-            },
-            {
-                "statBlockId": "swarm of poisonous snakes"
-            },
-            {
-                "statBlockId": "giant crocodile"
-            }
-        ],
-      "source": "default"
-    },
-    "rhinos": {
-        "name": "rhinos",
-        "mobs": [
-            {
-                "statBlockId": "rhinoceros"
-            },
-            {
-                "statBlockId": "draft horse", "reskin": "small rhino"
-            },
-            {
-                "statBlockId": "triceratops", "reskin": "giant rhino"
-            }
-        ],
-      "source": "default"
-    },
-    "ankhegs": {
-        "name": "ankhegs",
-        "mobs": [
-            {
-                "statBlockId": "ankheg"
-            },
-            {
-                "statBlockId": "ankheg tunneler"
-            },
-            {
-                "statBlockId": "ankheg worker"
-            },
-            {
-                "statBlockId": "ankheg queen"
-            }
-        ],
-      "source": "default"
-    },
-    "boars": {
-        "name": "boars",
-        "mobs": [
-            {
-                "statBlockId": "boar"
-            },
-            {
-                "statBlockId": "giant boar"
-            },
-            {
-                "statBlockId": "badger", "reskin": "piglet"
-            }
-        ],
-      "source": "default"
-    },
-    "ogres": {
-        "name": "ogres",
-        "mobs": [
-            {
-                "statBlockId": "half-ogre (ogrillon)"
-            },
-            {
-                "statBlockId": "ogre"
-            },
-            {
-                "statBlockId": "giant hyena"
-            },
-            {
-                "statBlockId": "hyena"
-            },
-            {
-                "statBlockId": "boulder thrower"
-            },
-            {
-                "statBlockId": "cyclops"
-            }
-        ],
-      "source": "default"
-    },
-    "harpies": {
-        "name": "harpies",
-        "mobs": [
-            {
-                "statBlockId": "harpy"
-            },
-            {
-                "statBlockId": "blood hawk"
-            },
-            {
-                "statBlockId": "axe beak"
-            },
-            {
-                "statBlockId": "giant owl"
-            },
-            {
-                "statBlockId": "cockatrice"
-            },
-            {
-                "statBlockId": "giant eagle"
-            },
-            {
-                "statBlockId": "wingmistress"
-            }
-        ],
-      "source": "default"
-    },
-    "spiders": {
-        "name": "spiders",
-        "mobs": [
-            {
-                "statBlockId": "swarm of spiders"
-            },
-            {
-                "statBlockId": "giant wolf spider"
-            },
-            {
-                "statBlockId": "spider"
-            },
-            {
-                "statBlockId": "giant spider"
-            },
-            {
-                "statBlockId": "phase spider"
-            }
-        ],
-      "source": "default"
-    },
-    "vampires": {
-        "name": "vampires",
-        "mobs": [
-            {
-                "statBlockId": "vampire spawn"
-            },
-            {
-                "statBlockId": "vampire"
-            },
-            {
-                "statBlockId": "vampire spellcaster"
-            },
-            {
-                "statBlockId": "vampire warrior"
-            }
-        ],
-      "source": "default"
-    },
-    "cultists": {
-        "name": "cultists",
-        "mobs": [
-            {
-                "statBlockId": "cultist"
-            },
-            {
-                "statBlockId": "priest"
-            },
-            {
-                "statBlockId": "mage"
-            },
-            {
-                "statBlockId": "cult fanatic"
-            },
-            {
-                "statBlockId": "acolyte"
-            },
-            {
-                "statBlockId": "archmage"
-            },
-            {
-                "statBlockId": "guard"
-            }
-        ],
-      "source": "default"
-    },
-    "satyrs": {
-        "name": "satyrs",
-        "mobs": [
-            {
-                "statBlockId": "satyr"
-            },
-            {
-                "statBlockId": "goat"
-            },
-            {
-                "statBlockId": "giant goat"
-            },
-            {
-                "statBlockId": "swarm of wasps"
-            },
-            {
-                "statBlockId": "satyr marksman"
-            },
-            {
-                "statBlockId": "satyr charger"
-            }
-        ],
-      "source": "default"
-    },
-    "kuo-toas": {
-        "name": "kuo-toas",
-        "mobs": [
-            {
-                "statBlockId": "kuo-toa"
-            },
-            {
-                "statBlockId": "kuo-toa whip"
-            },
-            {
-                "statBlockId": "kuo-toa monitor"
-            },
-            {
-                "statBlockId": "kuo-toa archpriest"
-            },
-            {
-                "statBlockId": "giant crab"
-            },
-            {
-                "statBlockId": "crocodile"
-            }
-        ],
-      "source": "default"
-    },
-    "centaurs": {
-        "name": "centaurs",
-        "mobs": [
-            {
-                "statBlockId": "centaur"
-            }
-        ],
-      "source": "default"
-    },
-    "hyenas": {
-        "name": "hyenas",
-        "mobs": [
-            {
-                "statBlockId": "jackal"
-            },
-            {
-                "statBlockId": "hyena"
-            },
-            {
-                "statBlockId": "giant hyena"
-            }
-        ],
-      "source": "default"
-    },
-    "plants": {
-        "name": "plants",
-        "mobs": [
-            {
-                "statBlockId": "awakened shrub"
-            },
-            {
-                "statBlockId": "awakened tree"
-            },
-            {
-                "statBlockId": "shambling mound"
-            },
-            {
-                "statBlockId": "treant"
-            },
-            {
-                "statBlockId": "needle blight"
-            },
-            {
-                "statBlockId": "vine blight"
-            }
-        ],
-      "source": "default"
-    },
-    "fungi": {
-        "name": "fungi",
-        "mobs": [
-            {
-                "statBlockId": "myconid adult"
-            },
-            {
-                "statBlockId": "myconid sovereign"
-            },
-            {
-                "statBlockId": "myconid sprout"
-            },
-            {
-                "statBlockId": "violet fungus"
-            },
-            {
-                "statBlockId": "shrieker"
-            }
-        ],
-      "source": "default"
-    },
-    "hippos": {
-        "name": "hippos",
-        "mobs": [
-            {
-                "statBlockId": "juvenile hippo"
-            },
-            {
-                "statBlockId": "adult hippo"
-            },
-            {
-                "statBlockId": "alpha hippo"
-            }
-        ],
-      "source": "default"
-    },
-    "undead": {
-        "name": "undead",
-        "mobs": [
-            {
-                "statBlockId": "skeleton"
-            },
-            {
-                "statBlockId": "zombie"
-            },
-            {
-                "statBlockId": "shadow"
-            },
-            {
-                "statBlockId": "ghoul"
-            },
-            {
-                "statBlockId": "specter"
-            },
-            {
-                "statBlockId": "ghast"
-            },
-            {
-                "statBlockId": "minotaur skeleton"
-            },
-            {
-                "statBlockId": "ogre zombie"
-            },
-            {
-                "statBlockId": "poltergeist"
-            },
-            {
-                "statBlockId": "mummy"
-            },
-            {
-                "statBlockId": "wight"
-            },
-            {
-                "statBlockId": "ghost"
-            },
-            {
-                "statBlockId": "revenant"
-            },
-            {
-                "statBlockId": "wraith"
-            },
-            {
-                "statBlockId": "death tyrant"
-            },
-            {
-                "statBlockId": "mummy lord"
-            },
-            {
-                "statBlockId": "death knight"
-            },
-            {
-                "statBlockId": "demilich"
-            },
-            {
-                "statBlockId": "lich"
-            }
-        ],
-      "source": "default"
-    },
-    "corporeal-undead": {
-        "name": "undead, corporeal",
-        "mobs": [
-            {
-                "statBlockId": "skeleton"
-            },
-            {
-                "statBlockId": "zombie"
-            },
-            {
-                "statBlockId": "ghoul"
-            },
-            {
-                "statBlockId": "minotaur skeleton"
-            },
-            {
-                "statBlockId": "ogre zombie"
-            },
-            {
-                "statBlockId": "mummy"
-            },
-            {
-                "statBlockId": "wight"
-            },
-            {
-                "statBlockId": "revenant"
-            },
-            {
-                "statBlockId": "death tyrant"
-            },
-            {
-                "statBlockId": "mummy lord"
-            },
-            {
-                "statBlockId": "death knight"
-            },
-            {
-                "statBlockId": "demilich"
-            },
-            {
-                "statBlockId": "lich"
-            }
-        ],
-      "source": "default"
-    }
+  "wolves": {
+    "name": "wolves",
+    "mobs": [
+      {
+        "statBlockId": "wolf"
+      },
+      {
+        "statBlockId": "dire wolf"
+      },
+      {
+        "statBlockId": "mastiff",
+        "reskin": "young wolf"
+      }
+    ],
+    "source": "default"
+  },
+  "bears": {
+    "name": "bears",
+    "mobs": [
+      {
+        "statBlockId": "black bear"
+      },
+      {
+        "statBlockId": "brown bear"
+      },
+      {
+        "statBlockId": "cave bear"
+      }
+    ],
+    "source": "default"
+  },
+  "millipedes": {
+    "name": "millipedes",
+    "mobs": [
+      {
+        "statBlockId": "giant millipede"
+      },
+      {
+        "statBlockId": "adult giant millipede"
+      },
+      {
+        "statBlockId": "giant centipede"
+      },
+      {
+        "statBlockId": "swarm of centipedes",
+        "reskin": "swarm of small millipedes"
+      }
+    ],
+    "source": "default"
+  },
+  "bandits": {
+    "name": "bandits",
+    "mobs": [
+      {
+        "statBlockId": "bandit"
+      },
+      {
+        "statBlockId": "bandit captain"
+      },
+      {
+        "statBlockId": "veteran"
+      },
+      {
+        "statBlockId": "knight",
+        "reskin": "armored bandit"
+      },
+      {
+        "statBlockId": "scout"
+      },
+      {
+        "statBlockId": "gladiator",
+        "reskin": "muscly bandit"
+      },
+      {
+        "statBlockId": "druid",
+        "reskin": "caster bandit"
+      },
+      {
+        "statBlockId": "spy",
+        "reskin": "sneaky bandit"
+      }
+    ],
+    "source": "default"
+  },
+  "dwarves": {
+    "name": "dwarves",
+    "mobs": [
+      {
+        "statBlockId": "orc war chief",
+        "reskin": "war chief"
+      },
+      {
+        "statBlockId": "hobgoblin captain",
+        "reskin": "captain"
+      },
+      {
+        "statBlockId": "hobgoblin warlord",
+        "reskin": "warlord"
+      },
+      {
+        "statBlockId": "mage"
+      },
+      {
+        "statBlockId": "veteran"
+      },
+      {
+        "statBlockId": "priest"
+      },
+      {
+        "statBlockId": "berserker"
+      },
+      {
+        "statBlockId": "duergar"
+      },
+      {
+        "statBlockId": "scout"
+      }
+    ],
+    "source": "default"
+  },
+  "thri-kreen": {
+    "name": "thri-kreen",
+    "mobs": [
+      {
+        "statBlockId": "thri-kreen"
+      }
+    ],
+    "source": "default"
+  },
+  "sahuagin": {
+    "name": "sahuagin",
+    "mobs": [
+      {
+        "statBlockId": "sahuagin"
+      },
+      {
+        "statBlockId": "sahuagin baron"
+      },
+      {
+        "statBlockId": "sahuagin priestess"
+      },
+      {
+        "statBlockId": "giant sea horse"
+      },
+      {
+        "statBlockId": "reef shark"
+      }
+    ],
+    "source": "default"
+  },
+  "coastal_elementals": {
+    "name": "coastal elementals",
+    "mobs": [
+      {
+        "statBlockId": "air elemental"
+      },
+      {
+        "statBlockId": "ice mephit"
+      },
+      {
+        "statBlockId": "water elemental"
+      },
+      {
+        "statBlockId": "water weird"
+      },
+      {
+        "statBlockId": "marid"
+      },
+      {
+        "statBlockId": "mud mephit"
+      }
+    ],
+    "source": "default"
+  },
+  "land_elementals": {
+    "name": "land elementals",
+    "mobs": [
+      {
+        "statBlockId": "dao"
+      },
+      {
+        "statBlockId": "dust mephit"
+      },
+      {
+        "statBlockId": "galeb duhr"
+      },
+      {
+        "statBlockId": "gargoyle"
+      },
+      {
+        "statBlockId": "mud mephit"
+      },
+      {
+        "statBlockId": "xorn"
+      },
+      {
+        "statBlockId": "earth elemental"
+      }
+    ],
+    "source": "default"
+  },
+  "mountain_elementals": {
+    "name": "mountain elementals",
+    "mobs": [
+      {
+        "statBlockId": "galeb duhr"
+      },
+      {
+        "statBlockId": "gargoyle"
+      },
+      {
+        "statBlockId": "dust mephit"
+      },
+      {
+        "statBlockId": "air elemental"
+      },
+      {
+        "statBlockId": "earth elemental"
+      }
+    ],
+    "source": "default"
+  },
+  "fire_elementals": {
+    "name": "fire elementals",
+    "mobs": [
+      {
+        "statBlockId": "smoke mephit"
+      },
+      {
+        "statBlockId": "steam mephit"
+      },
+      {
+        "statBlockId": "magma mephit"
+      },
+      {
+        "statBlockId": "magmin"
+      },
+      {
+        "statBlockId": "fire elemental"
+      },
+      {
+        "statBlockId": "fire snake"
+      }
+    ],
+    "source": "default"
+  },
+  "forest_creatures": {
+    "name": "forest creatures",
+    "mobs": [
+      {
+        "statBlockId": "giant weasel"
+      },
+      {
+        "statBlockId": "boar"
+      },
+      {
+        "statBlockId": "elk"
+      },
+      {
+        "statBlockId": "giant badger"
+      },
+      {
+        "statBlockId": "giant goat"
+      },
+      {
+        "statBlockId": "giant elk"
+      }
+    ],
+    "source": "default"
+  },
+  "reptiles": {
+    "name": "reptiles",
+    "mobs": [
+      {
+        "statBlockId": "lizard"
+      },
+      {
+        "statBlockId": "flying snake"
+      },
+      {
+        "statBlockId": "poisonous snake"
+      },
+      {
+        "statBlockId": "constrictor snake"
+      },
+      {
+        "statBlockId": "giant lizard"
+      },
+      {
+        "statBlockId": "giant poisonous snake"
+      },
+      {
+        "statBlockId": "crocodile"
+      },
+      {
+        "statBlockId": "giant constrictor snake"
+      },
+      {
+        "statBlockId": "swarm of poisonous snakes"
+      },
+      {
+        "statBlockId": "giant crocodile"
+      }
+    ],
+    "source": "default"
+  },
+  "rhinos": {
+    "name": "rhinos",
+    "mobs": [
+      {
+        "statBlockId": "rhinoceros"
+      },
+      {
+        "statBlockId": "draft horse",
+        "reskin": "small rhino"
+      },
+      {
+        "statBlockId": "triceratops",
+        "reskin": "giant rhino"
+      }
+    ],
+    "source": "default"
+  },
+  "ankhegs": {
+    "name": "ankhegs",
+    "mobs": [
+      {
+        "statBlockId": "ankheg"
+      },
+      {
+        "statBlockId": "ankheg tunneler"
+      },
+      {
+        "statBlockId": "ankheg worker"
+      },
+      {
+        "statBlockId": "ankheg queen"
+      }
+    ],
+    "source": "default"
+  },
+  "boars": {
+    "name": "boars",
+    "mobs": [
+      {
+        "statBlockId": "boar"
+      },
+      {
+        "statBlockId": "giant boar"
+      },
+      {
+        "statBlockId": "badger",
+        "reskin": "piglet"
+      }
+    ],
+    "source": "default"
+  },
+  "ogres": {
+    "name": "ogres",
+    "mobs": [
+      {
+        "statBlockId": "half-ogre (ogrillon)"
+      },
+      {
+        "statBlockId": "ogre"
+      },
+      {
+        "statBlockId": "giant hyena"
+      },
+      {
+        "statBlockId": "hyena"
+      },
+      {
+        "statBlockId": "boulder thrower"
+      },
+      {
+        "statBlockId": "cyclops"
+      }
+    ],
+    "source": "default"
+  },
+  "harpies": {
+    "name": "harpies",
+    "mobs": [
+      {
+        "statBlockId": "harpy"
+      },
+      {
+        "statBlockId": "blood hawk"
+      },
+      {
+        "statBlockId": "axe beak"
+      },
+      {
+        "statBlockId": "giant owl"
+      },
+      {
+        "statBlockId": "cockatrice"
+      },
+      {
+        "statBlockId": "giant eagle"
+      },
+      {
+        "statBlockId": "wingmistress"
+      }
+    ],
+    "source": "default"
+  },
+  "spiders": {
+    "name": "spiders",
+    "mobs": [
+      {
+        "statBlockId": "swarm of spiders"
+      },
+      {
+        "statBlockId": "giant wolf spider"
+      },
+      {
+        "statBlockId": "spider"
+      },
+      {
+        "statBlockId": "giant spider"
+      },
+      {
+        "statBlockId": "phase spider"
+      }
+    ],
+    "source": "default"
+  },
+  "vampires": {
+    "name": "vampires",
+    "mobs": [
+      {
+        "statBlockId": "vampire spawn"
+      },
+      {
+        "statBlockId": "vampire"
+      },
+      {
+        "statBlockId": "vampire spellcaster"
+      },
+      {
+        "statBlockId": "vampire warrior"
+      }
+    ],
+    "source": "default"
+  },
+  "cultists": {
+    "name": "cultists",
+    "mobs": [
+      {
+        "statBlockId": "cultist"
+      },
+      {
+        "statBlockId": "priest"
+      },
+      {
+        "statBlockId": "mage"
+      },
+      {
+        "statBlockId": "cult fanatic"
+      },
+      {
+        "statBlockId": "acolyte"
+      },
+      {
+        "statBlockId": "archmage"
+      },
+      {
+        "statBlockId": "guard"
+      }
+    ],
+    "source": "default"
+  },
+  "satyrs": {
+    "name": "satyrs",
+    "mobs": [
+      {
+        "statBlockId": "satyr"
+      },
+      {
+        "statBlockId": "goat"
+      },
+      {
+        "statBlockId": "giant goat"
+      },
+      {
+        "statBlockId": "swarm of wasps"
+      },
+      {
+        "statBlockId": "satyr marksman"
+      },
+      {
+        "statBlockId": "satyr charger"
+      }
+    ],
+    "source": "default"
+  },
+  "kuo-toas": {
+    "name": "kuo-toas",
+    "mobs": [
+      {
+        "statBlockId": "kuo-toa"
+      },
+      {
+        "statBlockId": "kuo-toa whip"
+      },
+      {
+        "statBlockId": "kuo-toa monitor"
+      },
+      {
+        "statBlockId": "kuo-toa archpriest"
+      },
+      {
+        "statBlockId": "giant crab"
+      },
+      {
+        "statBlockId": "crocodile"
+      }
+    ],
+    "source": "default"
+  },
+  "centaurs": {
+    "name": "centaurs",
+    "mobs": [
+      {
+        "statBlockId": "centaur"
+      }
+    ],
+    "source": "default"
+  },
+  "hyenas": {
+    "name": "hyenas",
+    "mobs": [
+      {
+        "statBlockId": "jackal"
+      },
+      {
+        "statBlockId": "hyena"
+      },
+      {
+        "statBlockId": "giant hyena"
+      }
+    ],
+    "source": "default"
+  },
+  "plants": {
+    "name": "plants",
+    "mobs": [
+      {
+        "statBlockId": "awakened shrub"
+      },
+      {
+        "statBlockId": "awakened tree"
+      },
+      {
+        "statBlockId": "shambling mound"
+      },
+      {
+        "statBlockId": "treant"
+      },
+      {
+        "statBlockId": "needle blight"
+      },
+      {
+        "statBlockId": "vine blight"
+      }
+    ],
+    "source": "default"
+  },
+  "fungi": {
+    "name": "fungi",
+    "mobs": [
+      {
+        "statBlockId": "myconid adult"
+      },
+      {
+        "statBlockId": "myconid sovereign"
+      },
+      {
+        "statBlockId": "myconid sprout"
+      },
+      {
+        "statBlockId": "violet fungus"
+      },
+      {
+        "statBlockId": "shrieker"
+      }
+    ],
+    "source": "default"
+  },
+  "hippos": {
+    "name": "hippos",
+    "mobs": [
+      {
+        "statBlockId": "juvenile hippo"
+      },
+      {
+        "statBlockId": "adult hippo"
+      },
+      {
+        "statBlockId": "alpha hippo"
+      }
+    ],
+    "source": "default"
+  },
+  "undead": {
+    "name": "undead",
+    "mobs": [
+      {
+        "statBlockId": "skeleton"
+      },
+      {
+        "statBlockId": "zombie"
+      },
+      {
+        "statBlockId": "shadow"
+      },
+      {
+        "statBlockId": "ghoul"
+      },
+      {
+        "statBlockId": "specter"
+      },
+      {
+        "statBlockId": "ghast"
+      },
+      {
+        "statBlockId": "minotaur skeleton"
+      },
+      {
+        "statBlockId": "ogre zombie"
+      },
+      {
+        "statBlockId": "poltergeist"
+      },
+      {
+        "statBlockId": "mummy"
+      },
+      {
+        "statBlockId": "wight"
+      },
+      {
+        "statBlockId": "ghost"
+      },
+      {
+        "statBlockId": "revenant"
+      },
+      {
+        "statBlockId": "wraith"
+      },
+      {
+        "statBlockId": "death tyrant"
+      },
+      {
+        "statBlockId": "mummy lord"
+      },
+      {
+        "statBlockId": "death knight"
+      },
+      {
+        "statBlockId": "demilich"
+      },
+      {
+        "statBlockId": "lich"
+      }
+    ],
+    "source": "default"
+  },
+  "corporeal-undead": {
+    "name": "undead, corporeal",
+    "mobs": [
+      {
+        "statBlockId": "skeleton"
+      },
+      {
+        "statBlockId": "zombie"
+      },
+      {
+        "statBlockId": "ghoul"
+      },
+      {
+        "statBlockId": "minotaur skeleton"
+      },
+      {
+        "statBlockId": "ogre zombie"
+      },
+      {
+        "statBlockId": "mummy"
+      },
+      {
+        "statBlockId": "wight"
+      },
+      {
+        "statBlockId": "revenant"
+      },
+      {
+        "statBlockId": "death tyrant"
+      },
+      {
+        "statBlockId": "mummy lord"
+      },
+      {
+        "statBlockId": "death knight"
+      },
+      {
+        "statBlockId": "demilich"
+      },
+      {
+        "statBlockId": "lich"
+      }
+    ],
+    "source": "default"
+  }
 }

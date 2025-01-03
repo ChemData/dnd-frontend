@@ -22,36 +22,34 @@
       |
       <router-link to="/test">Test</router-link>
     </div>
-    <hr class="horizontal-divider">
+    <hr class="horizontal-divider" />
     <div class="view-area">
       <router-view />
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
   // Component options
-}
+};
 </script>
 
 <style>
-.full-area{
+.full-area {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.link-area{
+.link-area {
   margin-top: 0px;
 }
 
-.view-area{
+.view-area {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y:auto;
+  overflow-y: auto;
 }
 </style>
-

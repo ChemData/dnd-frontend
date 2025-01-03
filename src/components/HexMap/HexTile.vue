@@ -1,22 +1,22 @@
 <script>
 export default {
-  name: 'HexTile',
+  name: "HexTile",
   props: {
     size: {
       type: Number,
-      default: 100
+      default: 100,
     },
     color: {
       type: String,
-      default: '#3498db'
+      default: "#3498db",
     },
     pos: {
-      type: Array
-    }
+      type: Array,
+    },
   },
   data() {
     return {
-      points: ''
+      points: "",
     };
   },
   mounted() {
@@ -36,20 +36,18 @@ export default {
         pointsArray.push(`${x},${y}`);
       }
 
-      this.points = pointsArray.join(' ');
-    }
-  }
+      this.points = pointsArray.join(" ");
+    },
+  },
 };
 </script>
 
 <template>
-<div>
-  <svg :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`">
-    <polygon :points="points" :fill="color" />
-  </svg>
-</div>
+  <div>
+    <svg :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`">
+      <polygon :points="points" :fill="color" />
+    </svg>
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

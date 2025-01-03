@@ -1,17 +1,16 @@
-import 'vue-select/dist/vue-select.css'
-import './assets/main.css'
+import "vue-select/dist/vue-select.css";
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './views/HomeView.vue'
-import {createPinia} from "pinia";
-import {router} from "@/router/router";
+import { createApp } from "vue";
+import App from "./views/HomeView.vue";
+import { createPinia } from "pinia";
+import { router } from "@/router/router";
 import ToastPlugin from "vue-toast-notification";
-import 'vue-toast-notification/dist/theme-bootstrap.css';
+import "vue-toast-notification/dist/theme-bootstrap.css";
 
-
-const app = createApp(App)
-const pinia = createPinia()
-app.use(pinia)
-app.use(router)
-app.use(ToastPlugin)
-app.mount("#app")
+const app = createApp(App);
+const pinia = createPinia();
+app.use(pinia);
+app.use(router);
+app.use(ToastPlugin);
+app.mount("#app");

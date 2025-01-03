@@ -1,15 +1,15 @@
 <!-- Hour.vue -->
 <template>
   <div
-      :class="{ 'active': active }"
+    :class="{ active: active }"
     class="hour"
     :style="{
-      transform: `rotate(${angle}deg) translate(250px) rotate(${-angle}deg)`, /* Adjust the translate value as needed */
+      transform: `rotate(${angle}deg) translate(250px) rotate(${-angle}deg)` /* Adjust the translate value as needed */,
       backgroundColor: color,
     }"
     @click="toggleColor"
   >
-    <span class="hour-text">{{label}}</span>
+    <span class="hour-text">{{ label }}</span>
   </div>
 </template>
 
@@ -22,45 +22,44 @@ export default {
     },
     activeHour: {
       type: Number,
-      required: true
+      required: true,
     },
     hourIndex: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      color: 'brown',
+      color: "brown",
     };
   },
   methods: {
     toggleColor() {
-      this.color = this.color === 'brown' ? 'blue' : 'brown';
-      this.$emit('toggleColor');
+      this.color = this.color === "brown" ? "blue" : "brown";
+      this.$emit("toggleColor");
     },
   },
   computed: {
     label() {
-      let index = ((this.angle+90)%360)/360*24
-      let hour = index%12
-      if (hour === 0){
-        hour = 12
+      let index = (((this.angle + 90) % 360) / 360) * 24;
+      let hour = index % 12;
+      if (hour === 0) {
+        hour = 12;
       }
-      let period = ' AM'
+      let period = " AM";
       if (index > 11) {
-        period = ' PM'
+        period = " PM";
       }
-      return hour + period
-
+      return hour + period;
     },
     active() {
-      if(this.hourIndex === this.activeHour) {
-        return true
+      if (this.hourIndex === this.activeHour) {
+        return true;
       }
-      return false
-    }
-  }
+      return false;
+    },
+  },
 };
 </script>
 

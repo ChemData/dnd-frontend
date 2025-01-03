@@ -1,314 +1,314 @@
 {
-    "giant millipede": {
-        "name": "giant millipede",
-        "size": "large",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "3",
-        "num_cr": 3.0,
-        "xp": 700
+  "giant millipede": {
+    "name": "giant millipede",
+    "size": "large",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
     },
-    "adult giant millipede": {
-        "name": "adult giant millipede",
-        "size": "large",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "6",
-        "num_cr": 6.0,
-        "xp": 2300
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
     },
-    "boulder thrower": {
-        "name": "boulder thrower",
-        "size": "large",
-        "type": "giant",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "4",
-        "num_cr": 4.0,
-        "xp": 1100
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
     },
-    "wingmistress": {
-        "name": "wingmistress",
-        "size": "medium",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "3",
-        "num_cr": 3.0,
-        "xp": 700
+    "cr": "3",
+    "num_cr": 3.0,
+    "xp": 700
+  },
+  "adult giant millipede": {
+    "name": "adult giant millipede",
+    "size": "large",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
     },
-    "harpy matriarch": {
-        "name": "harpy matriarch",
-        "size": "medium",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "5",
-        "num_cr": 5.0,
-        "xp": 1800
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
     },
-    "satyr marksman": {
-        "name": "satyr marksman",
-        "size": "medium",
-        "type": "fey",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "4",
-        "num_cr": 4.0,
-        "xp": 1100
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
     },
-    "satyr charger": {
-        "name": "satyr charger",
-        "size": "medium",
-        "type": "fey",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "2",
-        "num_cr": 2.0,
-        "xp": 450
+    "cr": "6",
+    "num_cr": 6.0,
+    "xp": 2300
+  },
+  "boulder thrower": {
+    "name": "boulder thrower",
+    "size": "large",
+    "type": "giant",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
     },
-    "ankheg tunneler": {
-        "name": "ankheg tunneler",
-        "size": "small",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "1/2",
-        "num_cr": 0.5,
-        "xp": 100
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
     },
-    "ankheg worker": {
-        "name": "ankheg worker",
-        "size": "medium",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "1/4",
-        "num_cr": 0.25,
-        "xp": 50
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
     },
-    "ankheg queen": {
-        "name": "ankheg queen",
-        "size": "huge",
-        "type": "monstrosity",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "6",
-        "num_cr": 6.0,
-        "xp": 2300
+    "cr": "4",
+    "num_cr": 4.0,
+    "xp": 1100
+  },
+  "wingmistress": {
+    "name": "wingmistress",
+    "size": "medium",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
     },
-    "juvenile hippo": {
-        "name": "juvenile hippo",
-        "size": "medium",
-        "type": "beast",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "1/2",
-        "num_cr": 0.5,
-        "xp": 100
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
     },
-    "adult hippo": {
-        "name": "adult hippo",
-        "size": "large",
-        "type": "beast",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "1",
-        "num_cr": 1.0,
-        "xp": 200
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
     },
-    "alpha hippo": {
-        "name": "alpha hippo",
-        "size": "large",
-        "type": "beast",
-        "armor": {
-            "amount": 10,
-            "type": "natural"
-        },
-        "hp": {
-            "average": 20,
-            "roll": "2d8+2"
-        },
-        "speeds": {
-            "normal": 30,
-            "fly": 0,
-            "hover": 0,
-            "swim": 0,
-            "climb": 0,
-            "burrow": 0
-        },
-        "cr": "2",
-        "num_cr": 2.0,
-        "xp": 450
-    }
+    "cr": "3",
+    "num_cr": 3.0,
+    "xp": 700
+  },
+  "harpy matriarch": {
+    "name": "harpy matriarch",
+    "size": "medium",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "5",
+    "num_cr": 5.0,
+    "xp": 1800
+  },
+  "satyr marksman": {
+    "name": "satyr marksman",
+    "size": "medium",
+    "type": "fey",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "4",
+    "num_cr": 4.0,
+    "xp": 1100
+  },
+  "satyr charger": {
+    "name": "satyr charger",
+    "size": "medium",
+    "type": "fey",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "2",
+    "num_cr": 2.0,
+    "xp": 450
+  },
+  "ankheg tunneler": {
+    "name": "ankheg tunneler",
+    "size": "small",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "1/2",
+    "num_cr": 0.5,
+    "xp": 100
+  },
+  "ankheg worker": {
+    "name": "ankheg worker",
+    "size": "medium",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "1/4",
+    "num_cr": 0.25,
+    "xp": 50
+  },
+  "ankheg queen": {
+    "name": "ankheg queen",
+    "size": "huge",
+    "type": "monstrosity",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "6",
+    "num_cr": 6.0,
+    "xp": 2300
+  },
+  "juvenile hippo": {
+    "name": "juvenile hippo",
+    "size": "medium",
+    "type": "beast",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "1/2",
+    "num_cr": 0.5,
+    "xp": 100
+  },
+  "adult hippo": {
+    "name": "adult hippo",
+    "size": "large",
+    "type": "beast",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "1",
+    "num_cr": 1.0,
+    "xp": 200
+  },
+  "alpha hippo": {
+    "name": "alpha hippo",
+    "size": "large",
+    "type": "beast",
+    "armor": {
+      "amount": 10,
+      "type": "natural"
+    },
+    "hp": {
+      "average": 20,
+      "roll": "2d8+2"
+    },
+    "speeds": {
+      "normal": 30,
+      "fly": 0,
+      "hover": 0,
+      "swim": 0,
+      "climb": 0,
+      "burrow": 0
+    },
+    "cr": "2",
+    "num_cr": 2.0,
+    "xp": 450
+  }
 }
