@@ -1,42 +1,42 @@
 {
-        "city": {
-            "display": "City",
-            "icon_path": "city.svg"
-        },
-        "village": {
-            "display": "Village",
-            "icon_path": "village.svg"
-        },
-        "monster": {
-            "display": "Singular Monster",
-            "icon_path": "monster.svg"
-        },
-        "monster_den": {
-            "display": "Monster Den",
-            "icon_path": "monster_den.svg"
-        },
-        "obelisk": {
-            "display": "Obelisk",
-            "icon_path": "obelisk.svg"
-        },
-        "wildfolk_camp": {
-            "display": "Wildfolk Camp",
-            "icon_path": "wildfolk_camp.svg"
-        },
-        "bandit_camp": {
-            "display": "Bandit Camp",
-            "icon_path": "bandit_camp.svg"
-        },
-        "friendly_beast": {
-            "display": "Friendly Beast",
-            "icon_path": "friendly_beast.svg"
-        },
-        "anomaly": {
-            "display": "Anomaly",
-            "icon_path": "anomaly.svg"
-        },
-        "retreat": {
-            "display": "Retreat",
-            "icon_path": "retreat.svg"
-        }
-    }
+  "city": {
+    "display": "City",
+    "icon_path": "city.svg"
+  },
+  "village": {
+    "display": "Village",
+    "icon_path": "village.svg"
+  },
+  "monster": {
+    "display": "Singular Monster",
+    "icon_path": "monster.svg"
+  },
+  "monster_den": {
+    "display": "Monster Den",
+    "icon_path": "monster_den.svg"
+  },
+  "obelisk": {
+    "display": "Obelisk",
+    "icon_path": "obelisk.svg"
+  },
+  "wildfolk_camp": {
+    "display": "Wildfolk Camp",
+    "icon_path": "wildfolk_camp.svg"
+  },
+  "bandit_camp": {
+    "display": "Bandit Camp",
+    "icon_path": "bandit_camp.svg"
+  },
+  "friendly_beast": {
+    "display": "Friendly Beast",
+    "icon_path": "friendly_beast.svg"
+  },
+  "anomaly": {
+    "display": "Anomaly",
+    "icon_path": "anomaly.svg"
+  },
+  "retreat": {
+    "display": "Retreat",
+    "icon_path": "retreat.svg"
+  }
+}

@@ -20,33 +20,36 @@
       |
       <router-link to="/dungeon-maker">Dungeon Maker</router-link>
       |
-      <router-link to="/test">Test</router-link>
+      <router-link to="/party">Party</router-link>
     </div>
-    <hr>
+    <hr class="horizontal-divider" />
     <div class="view-area">
       <router-view />
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
   // Component options
-}
+};
 </script>
 
 <style>
-.full-area{
-  height: 100vh
+.full-area {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.link-area{
-  margin-top: 30px;
+.link-area {
+  margin-top: 0px;
 }
 
-.view-area{
-  height: 100vh
+.view-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 </style>
-

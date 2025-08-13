@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue';
-import axios from 'axios';
+import { defineComponent } from "vue";
+import axios from "axios";
 
 export default defineComponent({
   name: "TestView",
@@ -18,21 +18,20 @@ export default defineComponent({
       selected_creatures: "wolf",
       set_list: {},
       selected_set: "wolves",
-      set_contents: []
-    }
+      set_contents: [],
+    };
   },
   methods: {
     async fetchEnemyNames() {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/mob_set_names');
+        const response = await axios.get("http://127.0.0.1:8000/mob_set_names");
         this.set_list = response.data;
       } catch (error) {
-        console.error('Error fetching enemy names:', error);
+        console.error("Error fetching enemy names:", error);
       }
-    }
-  }
-}
-)
+    },
+  },
+});
 </script>
 
 <style scoped>

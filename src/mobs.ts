@@ -16,83 +16,86 @@ toward bears, and wolves, with very few dinosaurs.
 
 import { z } from "zod";
 
-const SizeSchema = z.enum(["tiny", "small", "medium", "large", "huge", "gargantuan"])
+const SizeSchema = z.enum(["tiny", "small", "medium", "large", "huge", "gargantuan"]);
 
 const MonsterTypeSchema = z.enum([
-    "aberration",
-    "beast",
-    "celestial",
-    "construct",
-    "dragon",
-    "elemental",
-    "fey",
-    "fiend",
-    "giant",
-    "humanoid",
-    "monstrosity",
-    "ooze",
-    "plant",
-    "swarm",
-    "undead"
-])
-
+  "aberration",
+  "beast",
+  "celestial",
+  "construct",
+  "dragon",
+  "elemental",
+  "fey",
+  "fiend",
+  "giant",
+  "humanoid",
+  "monstrosity",
+  "ooze",
+  "plant",
+  "swarm",
+  "undead",
+]);
 
 const ArmorSchema = z.object({
-    amount: z.number(),
-    type: z.string()
-})
+  amount: z.number(),
+  type: z.string(),
+});
 
 const HitPointsSchema = z.object({
-    average: z.number(),
-    roll: z.string()
-})
+  average: z.number(),
+  roll: z.string(),
+});
 
 const RollSchema = z.object({
-    amount: z.number(),
-    size: z.number(),
-    fixed: z.number()
-})
+  amount: z.number(),
+  size: z.number(),
+  fixed: z.number(),
+});
 
 const SpeedSchema = z.object({
-    normal: z.number(),
-    fly: z.number(),
-    hover: z.number(),
-    swim: z.number(),
-    climb: z.number(),
-    burrow: z.number()
-})
+  normal: z.number(),
+  fly: z.number(),
+  hover: z.number(),
+  swim: z.number(),
+  climb: z.number(),
+  burrow: z.number(),
+});
 
 const AttributesSchema = z.object({
-    str: z.number(),
-    dex: z.number(),
-    con: z.number(),
-    int: z.number(),
-    wis: z.number(),
-    cha: z.number()
-})
+  str: z.number(),
+  dex: z.number(),
+  con: z.number(),
+  int: z.number(),
+  wis: z.number(),
+  cha: z.number(),
+});
 
-const CRSchema = z.string()
 
-export type CR = z.infer<typeof CRSchema>
+const CRSchema = z.union([
+  z.string().regex(/^[1-9]\d*$/), // Matches any positive integer
+  z.enum(["0", "1/8", "1/4", "1/2"]),   // Matches the specific fractional values
+]);
+
+export type CR = z.infer<typeof CRSchema>;
 
 const StatBlockSchema = z.object({
-    name: z.string(),
-    size: SizeSchema,
-    type: MonsterTypeSchema,
-    armor: ArmorSchema,
-    hp: HitPointsSchema,
-    speeds: SpeedSchema,
-    cr: CRSchema,
-    num_cr: z.number(),
-    xp: z.number()
-})
+  name: z.string(),
+  size: SizeSchema,
+  type: MonsterTypeSchema,
+  armor: ArmorSchema,
+  hp: HitPointsSchema,
+  speeds: SpeedSchema,
+  cr: CRSchema,
+  num_cr: z.number(),
+  xp: z.number(),
+});
 
-type StatBlock = z.infer<typeof StatBlockSchema>;
+export type StatBlock = z.infer<typeof StatBlockSchema>;
 
 const MobSchema = z.object({
-    reskin: z.string().optional(),
-    statBlockId: z.string()
-})
+  reskin: z.string().optional(),
+  statBlockId: z.string(),
+});
 
 export type MobType = z.infer<typeof MobSchema>;
 
@@ -101,22 +104,22 @@ export const StatBlocksSchema = z.record(StatBlockSchema);
 export type StatBlocks = z.infer<typeof StatBlocksSchema>;
 
 const MobSetSchema = z.object({
-    name: z.string(),
-    mobs: z.array(MobSchema),
+  name: z.string(),
+  mobs: z.array(MobSchema),
+  source: z.string(),
 });
 
-export type MobSet = z.infer<typeof MobSetSchema>
+export type MobSet = z.infer<typeof MobSetSchema>;
 
-export const MobSetsSchema = z.record(MobSetSchema)
-
+export const MobSetsSchema = z.record(MobSetSchema);
 
 const MetaMobSetSchema = z.object({
-    name: z.string(),
-    sets: z.record(z.string(), z.number())
-})
+  name: z.string(),
+  sets: z.record(z.string(), z.number()),
+});
 
-export type MetaMobSet = z.infer<typeof MetaMobSetSchema>
+export type MetaMobSet = z.infer<typeof MetaMobSetSchema>;
 
-export const MetaMobSetsSchema = z.record(MetaMobSetSchema)
+export const MetaMobSetsSchema = z.record(MetaMobSetSchema);
 
-export type MetaMobSets = z.infer<typeof MetaMobSetSchema>
+export type MetaMobSets = z.infer<typeof MetaMobSetSchema>;
