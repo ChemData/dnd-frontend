@@ -20,7 +20,7 @@
       |
       <router-link to="/dungeon-maker">Dungeon Maker</router-link>
       |
-      <router-link to="/test">Test</router-link>
+      <router-link to="/party">Party</router-link>
     </div>
     <hr class="horizontal-divider" />
     <div class="view-area">

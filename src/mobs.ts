@@ -70,7 +70,11 @@ const AttributesSchema = z.object({
   cha: z.number(),
 });
 
-const CRSchema = z.string();
+
+const CRSchema = z.union([
+  z.string().regex(/^[1-9]\d*$/), // Matches any positive integer
+  z.enum(["0", "1/8", "1/4", "1/2"]),   // Matches the specific fractional values
+]);
 
 export type CR = z.infer<typeof CRSchema>;
 

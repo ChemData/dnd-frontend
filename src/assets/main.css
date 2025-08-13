@@ -57,9 +57,9 @@ a,
 .button {
   display: inline-block;
   padding: 0.5em 1em;
-  border: solid;
-  border-width: 1px;
-  border-radius: 8px;
+    border: 1px solid;
+    border-radius: 8px;
+    max-width: 200px;
   font-size: 16px;
   cursor: pointer;
   transition:
@@ -218,4 +218,25 @@ a,
   padding: 0px;
   height: 15px;
   width: 15px;
+}
+
+.text-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    margin: 2px;
+}
+
+.text-input:focus {
+    border-color: #93ade0;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.text-input:hover {
+    border-color: #888;
 }
